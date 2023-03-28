@@ -105,9 +105,12 @@ def main():
     # main loop 
     while True:
         print("\nOptions:")
-        print("1. Start quiz")
-        print("2. Show statistics")
-        print("3. Exit")
+        print("|--------------------------|")
+        print("| 1. Start quiz            |")
+        print("| 2. Show statistics       |")
+        print("| 3. Exit                  |")
+        print("|--------------------------|")
+
 
         option = input("Enter option number: ")
 
