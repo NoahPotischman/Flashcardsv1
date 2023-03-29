@@ -1,4 +1,6 @@
-# Flashcard("What is the capital of Germany?", "Berlin"),
+    # Flashcard("What is the capital of France?", "Paris"),
+    # Flashcard("What is the capital of Italy?", "Rome"),
+    # Flashcard("What is the capital of Germany?", "Berlin"),
     # Flashcard("What is the capital of the United States?", "Washington, D.C."),
     # Flashcard("What is the capital of Canada?", "Ottawa"),
     # Flashcard("What is the capital of the United Kingdom?", "London"),
