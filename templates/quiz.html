@@ -4,21 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz</title>
+    <title>Statistics</title>
+    <style>
+        body {
+            background-image: linear-gradient(to right, #84fab0, #8fd3f4);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        a {
+            color: white;
+            background-color: #f44336;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 2px;
+            cursor: pointer;
+        }
+        a:hover {
+            background-color: #da190b;
+        }
+    </style>
 </head>
 <body>
-    <h1>Quiz</h1>
-    {% for message in get_flashed_messages() %}
-        <p>{{ message }}</p>
-    {% endfor %}
-    <form action="{{ url_for('quiz', username=username) }}" method="post">
-        <label for="user_answer">{{ card.prompt }}</label>
-        <input type="text" id="user_answer" name="user_answer" required>
-        <input type="hidden" id="prompt" name="prompt" value="{{ card.prompt }}">
-        <input type="hidden" id="answer" name="answer" value="{{ card.answer }}">
-        <button type="submit">Submit</button>
-        </form>
-        <a href="{{ url_for('show_statistics', username=username) }}">Show statistics</a>
-        
-        </body>
-        </html>
+    <h1>Statistics</h1>
+    <h2>Correct answers:</h2>
+    <ul>
+        {% for question in user_data.correct %}
+            <li>{{ question }}</li>
+        {% endfor %}
+    </ul>
+    <h2>Incorrect answers:</h2>
+    <ul>
+        {% for question in user_data.incorrect %}
+            <li>{{ question }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('home') }}">Go back</a>
+</body>
+</html>
