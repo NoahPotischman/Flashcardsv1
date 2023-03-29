@@ -47,4 +47,4 @@ This Flask web application is designed to help users memorize and practice a set
 4. Push to the branch (`git push origin feature-branch`)
 5. Create a new Pull Request
 
-** Can be displayed in a web browser at https://replit.com/@NoahPotischman/Flashcardsv1 **
+** Can be displayed in a web browser at https://replit.com/@NoahPotischman/Flashcardsv1  (Not recommended)**
