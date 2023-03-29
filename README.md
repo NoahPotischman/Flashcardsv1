@@ -18,4 +18,4 @@ Let the user answer questions about how many flashcards they want to see, or whi
 
 Have an option to display statistics on user performance.
 Allow a user to "login" with a specific username, so different people can use your system and keep track of their results separately.
-** Can be displayed in a web browser at https://replit.com/@NoahPotischman/Flashcardsv1 **
+** Can be displayed in a web browser at https://replit.com/@NoahPotischman/Flashcardsv1 ** , or can be displayed locally with flask.
