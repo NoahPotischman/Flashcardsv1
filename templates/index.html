@@ -7,7 +7,7 @@
     <title>Flashcards</title>
     <style>
         body {
-            background-image: linear-gradient(to right, #84fab0, #8fd3f4);
+            background-image: linear-gradient(to right, #7b42bc, #3f51b5);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -15,6 +15,7 @@
             height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
+            position: relative;
         }
         .container {
             text-align: center;
@@ -25,7 +26,7 @@
             align-items: center;
         }
         label {
-            color: #3f51b5;
+            color: black;
         }
         input[type="text"] {
             border: 2px solid #3f51b5;
@@ -49,9 +50,29 @@
         button:hover {
             background-color: #283593;
         }
+        .timestamp {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: white;
+        }
     </style>
+    <script>
+        function getTime() {
+            const now = new Date();
+            const pstOffset = -8 * 60 * 60 * 1000; // PST offset in milliseconds
+            const pstDate = new Date(now.getTime() + now.getTimezoneOffset() * 60 * 1000 + pstOffset);
+            const month = pstDate.getMonth() + 1;
+            const day = pstDate.getDate();
+            const year = pstDate.getFullYear();
+            const hour = pstDate.getHours();
+            const minute = pstDate.getMinutes();
+            return `${month}/${day}/${year} ${hour}:${minute}`;
+        }
+    </script>
 </head>
 <body>
+    <div class="timestamp">Noah Potischman, <span id="currentTime"></span></div>
     <div class="container">
         <h1>Welcome to Flashcards</h1>
         <form action="/username" method="post">
@@ -60,5 +81,8 @@
             <button type="submit">Start</button>
         </form>
     </div>
+    <script>
+        document.getElementById("currentTime").innerText = getTime();
+    </script>
 </body>
 </html>
