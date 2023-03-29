@@ -5,13 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flashcards</title>
+    <style>
+        body {
+            background-image: linear-gradient(to right, #84fab0, #8fd3f4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        label {
+            color: #3f51b5;
+        }
+        input[type="text"] {
+            border: 2px solid #3f51b5;
+            color: #3f51b5;
+            padding: 5px;
+            margin: 10px;
+        }
+        button {
+            background-color: #3f51b5;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 2px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #283593;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to Flashcards</h1>
-    <form action="/username" method="post">
-        <label for="username">Enter your username:</label>
-        <input type="text" id="username" name="username" required>
-        <button type="submit">Start</button>
-    </form>
+    <div class="container">
+        <h1>Welcome to Flashcards</h1>
+        <form action="/username" method="post">
+            <label for="username">Enter your username:</label>
+            <input type="text" id="username" name="username" required>
+            <button type="submit">Start</button>
+        </form>
+    </div>
 </body>
 </html>
