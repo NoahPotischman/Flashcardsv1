@@ -32,6 +32,9 @@ This Flask web application is designed to help users memorize and practice a set
 
 3. Enter your username and start practicing!
 
+It should look like this: 
+<img width="1410" alt="Screen Shot 2023-03-30 at 12 09 58 PM" src="https://user-images.githubusercontent.com/114684575/228939585-9203eccf-7ef3-4639-96d2-5d66eda21e58.png">
+
 ## Features
 
 - Flashcard quiz format with customizable questions and answers
